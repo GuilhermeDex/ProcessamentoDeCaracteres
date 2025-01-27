@@ -1,0 +1,8 @@
+S 7
+Tempo total: 0.000679 segundos
+N
+Tempo total: 0.000703 segundos
+N
+Tempo total: 0.000709 segundos
+S 0
+Tempo total: 0.000712 segundos
