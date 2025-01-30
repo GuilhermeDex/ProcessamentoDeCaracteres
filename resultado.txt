@@ -1,60 +1,60 @@
 S 204
-Tempo total: 0.000853 segundos
+Tempo total: 0.000710 segundos
 S 298
-Tempo total: 0.000943 segundos
+Tempo total: 0.000810 segundos
 S 323
-Tempo total: 0.001084 segundos
+Tempo total: 0.000895 segundos
 S 94
-Tempo total: 0.001266 segundos
+Tempo total: 0.001010 segundos
 S 27
-Tempo total: 0.001352 segundos
+Tempo total: 0.001054 segundos
 S 328
-Tempo total: 0.001429 segundos
+Tempo total: 0.001143 segundos
 S 191
-Tempo total: 0.001531 segundos
+Tempo total: 0.001222 segundos
 S 80
-Tempo total: 0.001598 segundos
+Tempo total: 0.001272 segundos
 S 150
-Tempo total: 0.001669 segundos
+Tempo total: 0.001341 segundos
 S 267
-Tempo total: 0.001742 segundos
+Tempo total: 0.001410 segundos
 S 106
-Tempo total: 0.001849 segundos
+Tempo total: 0.001503 segundos
 S 254
-Tempo total: 0.001927 segundos
+Tempo total: 0.001553 segundos
 S 177
-Tempo total: 0.002053 segundos
+Tempo total: 0.001609 segundos
 S 130
-Tempo total: 0.002145 segundos
+Tempo total: 0.001687 segundos
 S 52
-Tempo total: 0.002223 segundos
+Tempo total: 0.001754 segundos
 S 214
-Tempo total: 0.002316 segundos
+Tempo total: 0.001859 segundos
 S 213
-Tempo total: 0.002380 segundos
+Tempo total: 0.001919 segundos
 S 4
-Tempo total: 0.002436 segundos
+Tempo total: 0.001958 segundos
 S 134
-Tempo total: 0.002563 segundos
+Tempo total: 0.002023 segundos
 S 46
-Tempo total: 0.002668 segundos
+Tempo total: 0.002114 segundos
 S 124
-Tempo total: 0.002730 segundos
+Tempo total: 0.002155 segundos
 S 284
-Tempo total: 0.002833 segundos
+Tempo total: 0.002241 segundos
 S 328
-Tempo total: 0.002928 segundos
+Tempo total: 0.002322 segundos
 S 198
-Tempo total: 0.003027 segundos
+Tempo total: 0.002408 segundos
 S 274
-Tempo total: 0.003120 segundos
+Tempo total: 0.002488 segundos
 S 168
-Tempo total: 0.003186 segundos
+Tempo total: 0.002548 segundos
 S 335
-Tempo total: 0.003274 segundos
+Tempo total: 0.002622 segundos
 S 292
-Tempo total: 0.003431 segundos
+Tempo total: 0.002717 segundos
 S 207
-Tempo total: 0.003517 segundos
+Tempo total: 0.002789 segundos
 S 114
-Tempo total: 0.003595 segundos
+Tempo total: 0.002855 segundos

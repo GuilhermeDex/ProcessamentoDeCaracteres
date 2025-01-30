@@ -6,17 +6,6 @@
 #include "../include/input.h"
 #include "../include/timer.h"
 
-#define MAX_NOTES 10000
-#define SEMITONES 12
-#define MAX_BITS (sizeof(unsigned long long) * 8)
-#define MAX_SEGMENTS 4  // do jeito que esta aqui permite ate 256 bits de padrao
-
-typedef unsigned long long ull;
-
-// criando uma estrutura para armazenar padroes maiores que 64 bits
-typedef struct {
-    ull segments[MAX_SEGMENTS];
-} Bitset;
 
 
 // criando 2 funcoes auxiliares  para facilitar a manipulacao do bitset
