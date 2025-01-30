@@ -1,7 +1,8 @@
 #ifndef LOGIC_H
 #define LOGIC_H
 
-//Funcoes para a logica do musical
+//funcoes para a logica do musical
+
 int nota_para_indice(char *nota);
 void converter_para_indices(char notas[][4], int indices[], int tamanho);
 void normalizar(int *notas, int tamanho, int deslocamento);

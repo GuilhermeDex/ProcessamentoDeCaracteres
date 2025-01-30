@@ -1,8 +1,60 @@
-S 7
-Tempo total: 0.000679 segundos
-N
-Tempo total: 0.000703 segundos
-N
-Tempo total: 0.000709 segundos
-S 0
-Tempo total: 0.000712 segundos
+S 204
+Tempo total: 0.000853 segundos
+S 298
+Tempo total: 0.000943 segundos
+S 323
+Tempo total: 0.001084 segundos
+S 94
+Tempo total: 0.001266 segundos
+S 27
+Tempo total: 0.001352 segundos
+S 328
+Tempo total: 0.001429 segundos
+S 191
+Tempo total: 0.001531 segundos
+S 80
+Tempo total: 0.001598 segundos
+S 150
+Tempo total: 0.001669 segundos
+S 267
+Tempo total: 0.001742 segundos
+S 106
+Tempo total: 0.001849 segundos
+S 254
+Tempo total: 0.001927 segundos
+S 177
+Tempo total: 0.002053 segundos
+S 130
+Tempo total: 0.002145 segundos
+S 52
+Tempo total: 0.002223 segundos
+S 214
+Tempo total: 0.002316 segundos
+S 213
+Tempo total: 0.002380 segundos
+S 4
+Tempo total: 0.002436 segundos
+S 134
+Tempo total: 0.002563 segundos
+S 46
+Tempo total: 0.002668 segundos
+S 124
+Tempo total: 0.002730 segundos
+S 284
+Tempo total: 0.002833 segundos
+S 328
+Tempo total: 0.002928 segundos
+S 198
+Tempo total: 0.003027 segundos
+S 274
+Tempo total: 0.003120 segundos
+S 168
+Tempo total: 0.003186 segundos
+S 335
+Tempo total: 0.003274 segundos
+S 292
+Tempo total: 0.003431 segundos
+S 207
+Tempo total: 0.003517 segundos
+S 114
+Tempo total: 0.003595 segundos

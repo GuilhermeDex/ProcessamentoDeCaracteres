@@ -8,9 +8,27 @@
 
 #define MAX_NOTES 10000
 #define SEMITONES 12
-
+#define MAX_BITS (sizeof(unsigned long long) * 8)
+#define MAX_SEGMENTS 4  // do jeito que esta aqui permite ate 256 bits de padrao
 
 typedef unsigned long long ull;
+
+// criando uma estrutura para armazenar padroes maiores que 64 bits
+typedef struct {
+    ull segments[MAX_SEGMENTS];
+} Bitset;
+
+
+// criando 2 funcoes auxiliares  para facilitar a manipulacao do bitset
+void bitset_clear(Bitset *b) {
+    memset(b->segments, 0, sizeof(b->segments));
+}
+
+void bitset_set(Bitset *b, int pos) {
+    int idx = pos / MAX_BITS;
+    int bit = pos % MAX_BITS;
+    b->segments[idx] |= (1ULL << bit);
+}
 
 // tabela de mapeamento de notas para indices
 int nota_para_indice(char *nota) {
@@ -125,29 +143,28 @@ int bmh(int *texto, int tamanho_texto, int *padrao, int tamanho_padrao) {
 }
 
 
-
+// SHIFT_AND 
 int shift_and(int *texto, int tamanho_texto, int *padrao, int tamanho_padrao) {
-    ull Mascara[SEMITONES]; 
-    ull R;                  
-    int i;                  
+    Bitset Mascara[SEMITONES];  
+    Bitset R;                   
+    int i;                      
 
-    if (tamanho_padrao > sizeof(ull) * 8) {
-        printf("Erro: Tamanho do padrao maior que o suportado (%lu bits).\n", sizeof(ull) * 8);
+// verificando se o tamnaho do padrao excede o limite
+    if (tamanho_padrao > MAX_BITS * MAX_SEGMENTS) {
+        printf("Erro: Tamanho do padrao maior que o suportado (%ld bits).\n", MAX_BITS * MAX_SEGMENTS);
         return -99;
     }
 
     memset(Mascara, 0, sizeof(Mascara));
+    bitset_clear(&R);
 
     for (i = 0; i < tamanho_padrao; i++) {
         if (padrao[i] < 0 || padrao[i] >= SEMITONES) {
             printf("Erro: Nota invalida no padrao na posicao %d (valor: %d).\n", i, padrao[i]);
             return -1;
         }
-        Mascara[padrao[i]] |= (1ULL << (tamanho_padrao - i - 1));
+        bitset_set(&Mascara[padrao[i]], tamanho_padrao - i - 1);                                   //define os bits correspondentes ao padrao
     }
-
-    // estado do automato
-    R = 0ULL;
 
     for (i = 0; i < tamanho_texto; i++) {
         if (texto[i] < 0 || texto[i] >= SEMITONES) {
@@ -155,16 +172,25 @@ int shift_and(int *texto, int tamanho_texto, int *padrao, int tamanho_padrao) {
             return -1;
         }
 
-        // atualizando o automato
-        R = ((R >> 1) | (1ULL << (tamanho_padrao - 1))) & Mascara[texto[i]];
+        Bitset temp;
+        memcpy(&temp, &R, sizeof(Bitset));
 
-        if (R & 1ULL) {
-            return (i - tamanho_padrao + 1); 
+        for (int j = MAX_SEGMENTS - 1; j >= 0; j--) {
+            ull carry = (j == 0) ? 1ULL << (tamanho_padrao - 1) : (R.segments[j - 1] & 1ULL) << (MAX_BITS - 1);
+            temp.segments[j] = (R.segments[j] >> 1) | carry;
+            temp.segments[j] &= Mascara[texto[i]].segments[j];
+        }
+
+        memcpy(&R, &temp, sizeof(Bitset));
+
+        if (R.segments[0] & 1ULL) {                                                                   // verifica a correspondencia do padrao foi encontrada
+            return (i - tamanho_padrao + 1);
         }
     }
 
     return -1;
 }
+
 
 
 
